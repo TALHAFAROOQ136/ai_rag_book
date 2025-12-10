@@ -1,0 +1,70 @@
+/**
+ * Custom CSS for RAG Book
+ */
+
+:root {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced code blocks */
+.theme-code-block {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Better link styling */
+article a:not(.hash-link) {
+  text-decoration: underline;
+  text-decoration-color: var(--ifm-color-primary);
+  text-decoration-thickness: 2px;
+  transition: all 0.2s;
+}
+
+article a:not(.hash-link):hover {
+  text-decoration-thickness: 3px;
+  opacity: 0.8;
+}
+
+/* Improved heading anchors */
+.hash-link {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+h1:hover .hash-link,
+h2:hover .hash-link,
+h3:hover .hash-link {
+  opacity: 0.6;
+}
+
+.hash-link:hover {
+  opacity: 1 !important;
+}
+
+/* Custom admonitions */
+.admonition {
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
