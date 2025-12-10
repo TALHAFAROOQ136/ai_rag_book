@@ -1,70 +1,54 @@
-# Packaging Skills Guide
+# Skills Packaging Guide (Roman Urdu)
 
-This guide explains how to package the `skills` directory into a distributable Python library.
+Ye guide aapko batayegi ke `skills` folder ko ek python library kese banate hain taake kisi aur project mein use kar sakein.
 
-## Prerequisites
+## Pre-requisites (Zaroori Cheezein)
 
-- Python 3.8+
-- pip
-- setuptools, wheel
+- Python 3.8+ hona chahiye
+- Terminal mein `pip` install hona chahiye
 
-## 1. Build the Package
+## 1. Package Build Karna
 
-Open a terminal in the project root:
+Sabse pehle project folder mein terminal khol kar ye commands run karein:
 
 ```bash
-# Install build tools
+# Build tools update karein
 pip install --upgrade setuptools wheel
 
-# Build source distribution and wheel
+# Package create karein
 python setup.py sdist bdist_wheel
 ```
 
-This will create a `dist/` directory containing:
-- `matrix-skills-0.1.0.tar.gz` (Source)
-- `matrix_skills-0.1.0-py3-none-any.whl` (Wheel - Precompiled)
+Is se ek naya `dist/` folder ban jayega jismein ye file hogi:
+- `matrix_skills-0.1.0-py3-none-any.whl` (Ye apki main file hai)
 
-## 2. Install in Another Project
+## 2. Kisi Aur Project Mein Install Karna
 
-You can install the package directly from the wheel file.
+Ab agar aapko ye skills kisi doosre project mein use karni hain:
 
-**Copy the wheel file to your new project and run:**
+1. `dist/` folder se `.whl` file copy karein.
+2. Apne naye project ke folder mein paste karein.
+3. Terminal mein ye command run karein:
 
 ```bash
 pip install matrix_skills-0.1.0-py3-none-any.whl
 ```
 
-Or install directly from the source folder (development mode):
+## 3. Code Mein Use Karna
 
-```bash
-pip install -e /path/to/ai_book/
-```
-
-## 3. Usage in Code
-
-Once installed, you can import skills directly:
+Install karne ke baad, aap direct import kar sakte hain:
 
 ```python
 from skills import QdrantIntegration, OpenAIAgentBuilder
 
-# Initialize standard Qdrant skill
+# Qdrant skill use karein
 qdrant = QdrantIntegration(url="...", api_key="...")
 
-# Initialize OpenAI Agent skill
+# OpenAI Agent skill use karein
 agent_builder = OpenAIAgentBuilder(api_key="...")
 ```
 
-## 4. Publishing to PyPI (Optional)
+## Troubleshooting (Masle Hal Karna)
 
-If you want to share with the world:
-
-1. Create account on [pypi.org](https://pypi.org)
-2. Install twine: `pip install twine`
-3. Upload: `twine upload dist/*`
-
-Now anyone can install with: `pip install matrix-skills`
-
-## Troubleshooting
-
-- **ImportError**: Ensure `__init__.py` files exist (we created them).
-- **Dependencies**: Check `install_requires` in `setup.py` matches your needs.
+- **Agar install na ho**: Check karein ke aapne pehle `python setup.py ...` wali command run ki hai ya nahi.
+- **Dependencies**: `openai` aur `qdrant-client` khud hi install ho jayenge.
