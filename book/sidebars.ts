@@ -39,6 +39,11 @@ const sidebars: SidebarsConfig = {
                 'chapter-4/resources',
             ],
         },
+        {
+            type: 'category',
+            label: 'Chapter 5: AI Safety & Ethics',
+            items: ['chapter-5/ai-safety', 'chapter-5/ethics'],
+        },
     ],
 };
 
