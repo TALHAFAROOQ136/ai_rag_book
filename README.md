@@ -226,3 +226,4 @@ MIT License - See LICENSE file for details
 **Created**: 2025-12-10  
 **Last Updated**: 2025-12-10  
 **Version**: 0.1.0 (Phase 0 Complete)
+# ai_rag_book
