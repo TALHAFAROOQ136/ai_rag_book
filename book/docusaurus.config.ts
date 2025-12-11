@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Learn Retrieval-Augmented Generation with AI-Generated Content',
 
   url: 'https://TALHAFAROOQ136.github.io',
-  baseUrl: '/ai_book/',
+  baseUrl: '/ai_rag_book/',
 
   organizationName: 'TALHAFAROOQ136',
   projectName: 'ai_book',
